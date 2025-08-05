@@ -189,12 +189,12 @@ const Features = () => {
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {Object.entries(feature.metrics).map(([key, value], metricIndex) => (
                     <div key={key} 
-                         className="text-center backdrop-blur-sm bg-white/5 rounded-lg py-2 group-hover:bg-white/10 transition-all duration-500"
+                         className="text-center backdrop-blur-sm bg-white/15 rounded-lg py-2 group-hover:bg-white/5 transition-all duration-500"
                          style={{ transitionDelay: `${metricIndex * 100}ms` }}>
                       <div className={`text-sm font-bold bg-gradient-to-r ${feature.gradient} bg-clip-text text-transparent`}>
                         {value}
                       </div>
-                      <div className="text-xs text-gray-500 capitalize">{key}</div>
+                      <div className="text-xs text-gray-300 capitalize">{key}</div>
                     </div>
                   ))}
                 </div>
@@ -211,9 +211,9 @@ const Features = () => {
                   </div>
                   
                   {/* Feature Number */}
-                  <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white text-sm font-bold opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300`}>
+                  {/* <div className={`w-8 h-8 rounded-full bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white text-sm font-bold opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300`}>
                     {index + 1}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
