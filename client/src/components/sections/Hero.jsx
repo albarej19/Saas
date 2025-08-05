@@ -58,7 +58,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero-section" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="hero-section" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-25 pb-20">
       {/* Dynamic Gradient Background */}
       <div 
         className="absolute inset-0 transition-all duration-1000 ease-out"

@@ -304,7 +304,7 @@ const Testimonials = () => {
           {/* Previous Button */}
           <button
             onClick={prevTestimonial}
-            className="group backdrop-blur-xl bg-white/10 border border-white/20 p-4 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-110"
+            className="group backdrop-blur-xl bg-white/10 border border-white/20 p-4 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-110 cursor-pointer"
           >
             <svg className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -317,7 +317,7 @@ const Testimonials = () => {
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`relative transition-all duration-300 ${
+                className={`relative transition-all duration-300 cursor-pointer ${
                   index === currentIndex
                     ? 'w-12 h-4'
                     : 'w-4 h-4 hover:w-6'
@@ -338,7 +338,7 @@ const Testimonials = () => {
           {/* Next Button */}
           <button
             onClick={nextTestimonial}
-            className="group backdrop-blur-xl bg-white/10 border border-white/20 p-4 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-110"
+            className="group backdrop-blur-xl bg-white/10 border border-white/20 p-4 rounded-2xl hover:bg-white/20 transition-all duration-300 hover:scale-110 cursor-pointer"
           >
             <svg className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

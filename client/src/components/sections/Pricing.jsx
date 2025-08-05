@@ -155,7 +155,7 @@ const Pricing = () => {
             <div className="relative">
               <button
                 onClick={() => setIsAnnual(!isAnnual)}
-                className={`w-16 h-8 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/30 ${
+                className={`w-16 h-8 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/30 cursor-pointer ${
                   isAnnual ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'bg-gray-600'
                 }`}
               >
@@ -303,7 +303,7 @@ const Pricing = () => {
 
                 {/* CTA Button */}
                 <div className="mt-auto">
-                  <button className={`w-full py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 group-hover:scale-105 ${
+                  <button className={`w-full py-4 px-6 rounded-2xl font-bold text-lg transition-all duration-300 group-hover:scale-105 cursor-pointer ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-purple-500/30 hover:from-purple-400 hover:to-pink-400'
                       : 'backdrop-blur-xl bg-white/10 border border-white/20 text-white hover:border-white/40 hover:bg-white/20'
@@ -343,13 +343,13 @@ const Pricing = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
-                <button className="group relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white text-lg font-bold px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                <button className="group relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white text-lg font-bold px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer">
                   <span className="relative z-10 flex items-center">
                     📞 Schedule Consultation
                   </span>
                 </button>
                 
-                <button className="group backdrop-blur-xl bg-white/10 border border-white/20 text-white text-lg font-semibold px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:bg-white/20">
+                <button className="group backdrop-blur-xl bg-white/10 border border-white/20 text-white text-lg font-semibold px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:bg-white/20 cursor-pointer">
                   <span className="flex items-center">
                     🎥 View Enterprise Demo
                   </span>
