@@ -8,7 +8,7 @@ const Header = () => {
   // This one is for tracking which section is active
   const [activeSection, setActiveSection] = useState('hero');
 
-  // Handle scroll effects - this was tricky to figure out!
+  // Handle scroll effects 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -20,7 +20,7 @@ const Header = () => {
         setIsScrolled(false);
       }
       
-      // Hide header when scrolling down (copied from a tutorial)
+      // Hide header when scrolling down
       if (currentScrollY < lastScrollY || currentScrollY < 100) {
         setIsVisible(true);
       } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -31,7 +31,7 @@ const Header = () => {
       setLastScrollY(currentScrollY);
     };
 
-    // Track which section is currently visible (this took me forever to get right)
+    // Track which section is currently visible 
     const checkActiveSection = () => {
       const sections = ['hero', 'features', 'pricing', 'testimonials', 'faq'];
       
@@ -64,7 +64,7 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-  // Navigation items - probably should move this outside component but whatever
+  // Navigation items
   const navigationItems = [
     { 
       href: '#features', 
@@ -88,7 +88,7 @@ const Header = () => {
     }
   ];
 
-  // Smooth scroll function (found this online)
+  // Smooth scroll function 
   const scrollToSection = (elementId) => {
     const element = document.getElementById(elementId.replace('#', ''));
     if (element) {
@@ -120,7 +120,7 @@ const Header = () => {
           }`}
         />
 
-        {/* Cool animated border at bottom */}
+        {/* animated border at bottom */}
         {isScrolled && (
           <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
         )}
@@ -128,10 +128,10 @@ const Header = () => {
         <nav className="relative z-10 container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             
-            {/* Logo section */}
+            {/* Logo */}
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={scrollToTop}>
               <div className="relative">
-                {/* Fancy glow effect on hover - this is so cool! */}
+                
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
                 
                 <div className="relative w-12 h-12 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -203,14 +203,14 @@ const Header = () => {
               </button>
             </div>
 
-            {/* Mobile menu button - better mobile touch target */}
+            {/* Mobile menu button */}
             <button
               className="lg:hidden relative p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 cursor-pointer min-w-[48px] min-h-[48px] touch-manipulation"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
             >
               <div className="w-6 h-6 relative mx-auto">
-                {/* Hamburger lines that transform to X - mobile optimized */}
+                {/* Hamburger lines transform to X*/}
                 <span className={`absolute h-0.5 w-6 bg-current transform transition-all duration-300 ${
                   isMobileMenuOpen ? 'rotate-45 top-3' : 'top-1'
                 }`} />
@@ -226,7 +226,7 @@ const Header = () => {
         </nav>
       </header>
 
-                  {/* Mobile menu overlay - made this more mobile friendly */}
+                  {/* Mobile menu overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           {/* Dark backdrop - tap to close */}
@@ -239,8 +239,7 @@ const Header = () => {
           <div className="relative z-50 flex flex-col h-full overflow-y-auto">
             {/* Space for fixed header */}
             <div className="h-20 flex-shrink-0" />
-            
-            {/* Menu items - better mobile spacing */}
+          
             <div className="flex-1 px-4 py-6 min-h-0">
               <div className="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-sm mx-auto">
                 
@@ -316,8 +315,6 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Bottom padding for safe area */}
             <div className="h-8 flex-shrink-0" />
           </div>
         </div>
