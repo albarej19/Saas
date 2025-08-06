@@ -70,7 +70,7 @@ const FAQ = () => {
   const categories = ['All', ...new Set(faqs.map(faq => faq.category))];
   const [activeCategory, setActiveCategory] = useState('All');
 
-  // Filter functionality - could probably optimize this better
+  // Filter functionality
   useEffect(() => {
     let filtered = faqs;
     
@@ -96,7 +96,7 @@ const FAQ = () => {
     }
   }, [searchQuery, activeCategory]);
 
-  // Animation stuff - copied from stackoverflow :)
+  // Animation stuff 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -131,10 +131,10 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="py-20 relative overflow-hidden" ref={sectionRef}>
-      {/* Background stuff */}
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black"></div>
       
-      {/* Some cool floating orbs */}
+      {/* floating orbs */}
       <div className="absolute inset-0">
         <div 
           className="absolute top-1/4 right-10 w-96 h-96 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" 
@@ -160,7 +160,7 @@ const FAQ = () => {
         />
       </div>
 
-      {/* Grid pattern - not sure if needed but looks cool */}
+      {/* Grid pattern */}
       <div className="absolute inset-0 opacity-[0.02]">
         <div 
           className="absolute inset-0" 
