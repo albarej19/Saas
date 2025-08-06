@@ -443,16 +443,7 @@ const Footer = () => {
                       <span className="text-sm">Back to top</span>
                     </button>
                   </div>
-                  
-                  {/* Made with Love */}
-                  {/* <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                    <span>Made with</span>
-                    <span className="text-red-400 animate-pulse text-lg">❤️</span>
-                    <span>for</span>
-                    <span className="text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text font-semibold">
-                      marketers
-                    </span>
-                  </div> */}
+                
                 </div>
               </div>
               
