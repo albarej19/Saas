@@ -6,12 +6,12 @@ const Hero = () => {
   const [refreshing, setRefreshing] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Simple useEffect for visibility - beginner approach
+  // Simple useEffect for visibility 
   useEffect(() => {
     setVisible(true);
   }, []);
 
-  // Basic mouse tracking - simplified
+  // Basic mouse tracking 
   useEffect(() => {
     const handleMouse = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
@@ -28,7 +28,7 @@ const Hero = () => {
     }, 1000);
   };
 
-  // Close button handler - beginner style
+  // Close button handler
   const closeBrowser = () => {
     const heroEl = document.getElementById("hero-section");
     heroEl.classList.add("animate-pulse");
@@ -46,7 +46,7 @@ const Hero = () => {
     }, 300);
   };
 
-  // Simple stats array - could be better organized
+  // Array objects
   const stats = [
     { num: "10K+", text: "Active Users", color: "from-blue-400 to-cyan-400" },
     { num: "300%", text: "Avg ROI", color: "from-purple-400 to-pink-400" },
@@ -63,7 +63,7 @@ const Hero = () => {
       id="hero-section"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-25 pb-20"
     >
-      {/* Background - AI generated but simplified */}
+      {/* Background */}
       <div
         className="absolute inset-0 transition-all duration-1000 ease-out"
         style={{
@@ -82,7 +82,7 @@ const Hero = () => {
         }}
       />
 
-      {/* Floating orbs - kept AI style */}
+      {/* Floating orbs */}
       <div className="absolute inset-0">
         <div
           className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
@@ -98,7 +98,7 @@ const Hero = () => {
         />
       </div>
 
-      {/* Grid pattern - simpler approach */}
+      {/* Grid pattern */}
       <div className="absolute inset-0 opacity-30">
         <div
           className="absolute inset-0"
@@ -112,7 +112,7 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-6xl mx-auto">
-          {/* Badge - beginner inline styling mixed with classes */}
+          {/* Badge */}
           <div
             className={`inline-flex items-center px-6 py-3 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 mb-8 ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -128,7 +128,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Main headline - beginner approach to animations */}
+          {/* Main headline */}
           <div className="space-y-4 mb-8">
             <h1
               className="text-7xl md:text-9xl font-black leading-none"
@@ -163,7 +163,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Subheadline - basic styling */}
+          {/* Subheadline */}
           <div
             className="mb-12"
             style={{
@@ -184,7 +184,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* CTAs - beginner button styling */}
+          {/* CTAs */}
           <div
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16"
             style={{
@@ -230,7 +230,7 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Trust logos - simple approach */}
+          {/* Trust logos */}
           <div
             className="mb-16"
             style={{
@@ -243,7 +243,7 @@ const Hero = () => {
               TRUSTED BY INDUSTRY LEADERS
             </p>
             <div className="flex flex-wrap items-center justify-center gap-8 opacity-60 hover:opacity-80 transition-opacity duration-300">
-              {/* Basic mapping - beginner style */}
+              {/* Basic mapping */}
               {[
                 "TechFlow",
                 "InnovateLab",
@@ -264,7 +264,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Dashboard Preview - mix of AI and beginner code */}
+        {/* Dashboard Preview */}
         <div
           className="relative max-w-6xl mx-auto"
           style={{
@@ -277,7 +277,7 @@ const Hero = () => {
             id="dashboard-preview"
             className="relative backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 shadow-2xl"
           >
-            {/* Browser bar - beginner implementation */}
+            {/* Browser bar */}
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
               {/* Traffic lights */}
               <div className="flex items-center space-x-3">
@@ -294,7 +294,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* URL bar - simplified */}
+              {/* URL bar */}
               <div className="flex-1 max-w-md mx-4">
                 <div className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 flex items-center">
                   <div className="w-4 h-4 mr-3">
@@ -316,7 +316,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Browser controls - basic */}
+              {/* Browser controls */}
               <div className="flex items-center space-x-2">
                 <button
                   onClick={refreshDashboard}
@@ -359,7 +359,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Stats grid - beginner style mapping */}
+            {/* Stats grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
                 <div
@@ -386,7 +386,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator - simple */}
+        {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="bg-white/10 border border-white/20 rounded-full p-3">
             <svg
