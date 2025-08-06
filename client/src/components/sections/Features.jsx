@@ -5,7 +5,7 @@ const Features = () => {
   const [showFeatures, setShowFeatures] = useState(new Set());
   const containerRef = useRef(null);
 
-  // Beginner-style features array - could be better organized
+  // Beginner-style features array 
   const featuresList = [
     {
       icon: '🤖',
@@ -57,7 +57,7 @@ const Features = () => {
     }
   ];
 
-  // Basic intersection observer - beginner approach
+  // Basic intersection observer
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -78,10 +78,10 @@ const Features = () => {
 
   return (
     <section id="features" className="py-20 relative overflow-hidden" ref={containerRef}>
-      {/* Background - AI generated style kept */}
+      
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900"></div>
       
-      {/* Floating orbs - AI style but simplified */}
+      {/* Floating orbs  */}
       <div className="absolute inset-0">
         <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" 
              style={{ animation: 'float 15s ease-in-out infinite' }} />
@@ -91,7 +91,7 @@ const Features = () => {
              style={{ animation: 'float 20s ease-in-out infinite 6s' }} />
       </div>
 
-      {/* Grid pattern - simple background */}
+      {/* Grid pattern  */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" 
              style={{
@@ -101,7 +101,7 @@ const Features = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-6">
-        {/* Header section - beginner styling approach */}
+        {/* Header section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-6 py-3 rounded-full backdrop-blur-xl bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-white/10 mb-8">
             <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mr-3 animate-pulse" />
@@ -125,7 +125,7 @@ const Features = () => {
           </p>
         </div>
 
-        {/* Features grid - beginner mapping style */}
+        {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
           {featuresList.map((feature, index) => (
             <div
@@ -143,10 +143,10 @@ const Features = () => {
               {/* Glow effect - AI style */}
               <div className={`absolute -inset-0.5 bg-gradient-to-r ${feature.color} rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-sm`} />
               
-              {/* Main card - mix of styles */}
+              {/* Main card */}
               <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-8 h-full transition-all duration-500 group-hover:border-white/20 group-hover:bg-white/10 group-hover:scale-105 group-hover:shadow-2xl">
                 
-                {/* Icon section - beginner approach */}
+                {/* Icon section */}
                 <div className="relative mb-6">
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} p-0.5 group-hover:scale-110 transition-all duration-500 group-hover:rotate-3`}>
                     <div className="w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center group-hover:bg-gray-800 transition-colors duration-500">
@@ -156,7 +156,7 @@ const Features = () => {
                     </div>
                   </div>
                   
-                  {/* Hover badge - basic conditional rendering */}
+                  {/* Hover badge */}
                   {hoveredCard === index && (
                     <div className="absolute -top-2 -right-2 backdrop-blur-xl bg-black/80 border border-white/20 rounded-lg px-3 py-1"
                          style={{ animation: 'fadeIn 0.3s ease' }}>
@@ -167,7 +167,7 @@ const Features = () => {
                   )}
                 </div>
 
-                {/* Content - simple structure */}
+                {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-500">
                   {feature.name}
                 </h3>
@@ -176,14 +176,14 @@ const Features = () => {
                   {feature.desc}
                 </p>
 
-                {/* Demo preview - beginner styling */}
+                {/* Demo preview */}
                 <div className="backdrop-blur-sm bg-black/20 border border-white/10 rounded-xl p-4 mb-6 group-hover:bg-black/40 group-hover:border-white/20 transition-all duration-500">
                   <div className="text-sm font-mono text-gray-300 group-hover:text-white transition-colors duration-300">
                     {feature.preview}
                   </div>
                 </div>
 
-                {/* Stats grid - basic mapping */}
+                {/* Stats grid */}
                 <div className="grid grid-cols-3 gap-3 mb-6">
                   {Object.entries(feature.stats).map(([key, value], i) => (
                     <div key={i} 
@@ -197,7 +197,7 @@ const Features = () => {
                   ))}
                 </div>
 
-                {/* Bottom section - beginner approach */}
+                {/* Bottom section */}
                 <div className="flex items-center justify-between">
                   <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 delay-200 cursor-pointer">
                     <div className="flex items-center text-blue-400 font-medium text-sm">
@@ -213,10 +213,10 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Bottom CTA section - mix of AI and beginner */}
+        
         <div className="max-w-4xl mx-auto">
           <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-12 text-center">
-            {/* Animated background - AI style */}
+            
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5 rounded-3xl animate-pulse" />
             
             <div className="relative z-10">
@@ -231,7 +231,7 @@ const Features = () => {
                 Join thousands of marketers who've already transformed their campaigns with AI
               </p>
               
-              {/* CTAs - beginner button styling */}
+              
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <button className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white text-lg font-bold px-10 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 cursor-pointer">
                   <span className="flex items-center">
@@ -256,7 +256,7 @@ const Features = () => {
         </div>
       </div>
 
-      {/* Basic CSS - beginner approach */}
+      {/* CSS styles */}
       <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
